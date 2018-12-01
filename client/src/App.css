@@ -1,0 +1,352 @@
+.wrapper{
+  width: 100%;
+}
+
+.status-bar{
+
+}
+
+.main-content{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.playground{
+  margin-top: 10px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.win{
+  background-color:black;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: -600px;
+  transition: 2s linear;
+}
+
+.box{
+  border: 1px solid #333;
+  min-width: 25px;
+  height: 25px;
+  flex-shrink: 1;
+  text-align: center;
+}
+
+.box p{
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.box .openent{
+  color: blue;
+}
+
+.room-container{
+  background-image: url('./Components/JoinRoom/public/images/xoxo_wall.jpg');
+  width: 100%;
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-layout{
+  position: absolute;
+  background-color: rgba(51, 51, 51, 0.9);
+  width: 100%;
+  height: 100vh;
+}
+
+.room-box{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  border: 1px solid white;
+  height: 80vh;
+  z-index: 2;
+}
+
+.join-room{
+  flex-grow: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.input-room-key{
+  width: 90%;
+}
+
+.but-join-room{
+  margin-top: 20px;
+  width: 90%;
+  z-index: 2;
+}
+
+.get-room{
+  display: flex;
+  flex-grow: 1;
+  border-left: 1px solid white;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  flex-flow: column;
+  z-index: 2;
+}
+
+.show-room-key{
+  width: 90%;
+  display: flex;
+}
+
+.show-room-key .input-group-prepen{
+  flex-shrink: 1;
+}
+
+.show-room-key input{
+  flex-shrink: 1;
+}
+
+.but-get-key{
+  z-index: 2;
+  margin-top: 20px;
+  flex-flow: row;
+  flex-shrink: 1;
+}
+
+.app-name{
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+}
+
+.app-name h2{
+  color: white;
+  font-size: 60px;
+}
+
+.app-name span{
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, -20px, 0);
+    opacity:1;
+    transition: transform 0.3s, opacity 0.3s;
+    animation: app-name-jumping 1.5s cubic-bezier(0.75, 0, 0.125, 1)  infinite;
+}
+
+.app-name span:nth-child(2){
+    animation-delay: 0.15s;
+}
+
+.app-name span:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+.app-name span:nth-child(4){
+    animation-delay: .45s;
+}
+
+.app-name span:nth-child(5){
+    animation-delay: 0.6s;
+}
+
+.app-name span:nth-child(6){
+    animation-delay: 0.75s;
+}
+
+.app-name span:nth-child(7){
+    animation-delay: 0.9s;
+}
+
+.app-name span:nth-child(8){
+    animation-delay: 1.05s;
+}
+
+.app-name span:nth-child(9){
+    animation-delay: 1.2s;
+}
+
+.app-name span:nth-child(10){
+    animation-delay: 1.35s;
+}
+
+@keyframes app-name-jumping{
+    0%{
+        transform: translate3d(0, -30px, 0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(0, 0px, 0);
+        opacity: 1;
+    }
+}
+
+.waiting_screen{
+  background: #000;
+  padding-top: 10px;
+  height: 100vh;
+}
+
+.typewriter{
+  color: lime;
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px auto;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 40em;
+  animation: type 6s steps(60, end);
+  text-align: center;
+}
+
+.typewriter:nth-child(2){
+  animation: type2 10s steps(60, end);
+}
+
+.typewriter:nth-child(3){
+  animation: type2 20s steps(60, end);
+}
+
+.typewriter a{
+  color: lime;
+  text-decoration: none;
+}
+
+/* span{
+  animation: blink 1s infinite;
+} */
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
+
+.not_your_turn {
+  pointer-events:none;
+}
+
+.messenger{
+  display: flex;
+  flex-flow: row;
+  margin-top: 10px;
+  min-width: 300px;
+  height: 500px;
+  position: fixed;
+  right: -280px;
+  transition: 1s linear;
+}
+
+.active_messenger{
+  right: 0;
+}
+
+.messenger_box{
+  height: 500px;
+  min-width: 280px;
+  border:1px solid #333;
+  display: flex;
+  flex-flow: column;
+  background-color:white;
+}
+
+.popup_messenger{
+  height: 50px;
+  min-width: 50px;
+  background-color: #333;
+}
+
+.message_place{
+  height: 85%;
+}
+
+.chat_place{
+  border-top: 1px solid #333;
+  height: 15%;
+}
+
+.chat_place .form-group{
+  display: flex;
+  flex-flow: row;
+}
+
+.textarea{
+  margin-top: 10px;
+  margin-left: 10px;
+  resize: none;
+  height: 40px;
+}
+
+.but_send{
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.mychat{
+  height: auto;
+  color:white;
+  /* position: absolute;
+  bottom: 10px;
+  right: 20px; */
+  text-align: right;
+}
+
+.mychat:nth-child(1){
+  margin-top: 20px;
+}
+
+.mychat p{
+  background-color:#0084ff;
+  display: inline-block;
+  padding:0 10px;
+  border-bottom-left-radius: 1.3em;
+  border-bottom-right-radius: 1.3em;
+  border-top-left-radius: 1.3em;
+  max-width: 300px;
+  margin-right:30px;
+}
+
+.friend-chat{
+  height: auto;
+  color:black;
+  /* position:absolute;
+  bottom: 10px;
+  left: 20px; */
+  display: block;
+}
+
+.friend-chat:nth-child(1){
+  margin-top: 20px;
+}
+
+.friend-chat p {
+  background-color:#d4cbcb;
+  border-bottom-left-radius: 1.3em;
+  border-bottom-right-radius: 1.3em;
+  border-top-right-radius: 1.3em;
+  padding:0 10px;
+  display: inline-block;
+  max-width: 300px;
+  margin-left:30px;
+}
