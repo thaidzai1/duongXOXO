@@ -32,7 +32,7 @@ export const join_private_room = (key, room) => dispatch => {
 }
 
 export const join_realtime = (key, user_id) => dispatch => {
-  const socket = socketIOClient('http://localhost:5000');
+  // const socket = socketIOClient('http://localhost:5000');
   return new Promise((resolve, reject) => {
     dispatch({
       type: JOIN_REALTIME,

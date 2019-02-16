@@ -29,12 +29,11 @@ class ModalWin extends React.Component {
 
   render () {
     return (
-      <Modal isOpen={this.props.win} toggle={this.props.toggle}>
+      <Modal isOpen={this.props.win} toggle={this.props.replay}>
         <ModalHeader toggle={this.props.toggle}>Modal title</ModalHeader>
         {this.show_the_winner()}
         <ModalFooter>
-          <Button color="primary" onClick={this.props.replay}>Replay</Button>{' '}
-          <Button color="secondary" onClick={this.props.toggle}>Cancel</Button>
+          <Button color="primary" onClick={this.props.replay}>Replay</Button>
         </ModalFooter>
       </Modal>
     )

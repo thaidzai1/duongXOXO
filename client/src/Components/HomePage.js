@@ -14,7 +14,7 @@ class HomePage extends React.Component {
   state = {
     room_full: false,
     identity: true,
-    waiting: false //if run must be true
+    waiting: true //if run must be true
   }
 
   async componentWillMount(){
@@ -57,8 +57,8 @@ class HomePage extends React.Component {
     if(this.state.waiting){
       return(
         <div className='waiting_screen'>
-          <p className='typewriter'>Welcome to my XOXO games website ♥ ♥ </p>
-          <p className='typewriter'>My name is Thai Duong and this is my first website game ♥♥♥</p>
+          <p className='typewriter'>Welcome to my XOXO web game ♥ ♥ </p>
+          <p className='typewriter'>My name is Thai Duong and this is my first web game ♥♥♥</p>
           <p className='typewriter'>♥♥♥ Send your code room to play with your friend ♥♥♥</p>
         </div>
       )

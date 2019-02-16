@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import MessagePlace from './MessagePlace'
@@ -91,7 +90,7 @@ class Messenger extends React.Component {
     console.log(this.props.room);
     return(
       <div className='messenger' ref={this.message_box}>
-        <div className='popup_messenger' onClick={this.popup_messenger}></div>
+        <img className='popup_messenger' src="./lib/messenger.svg" onClick={this.popup_messenger} />
         <div className='messenger_box'>
           <MessagePlace messages={this.state.messages}></MessagePlace>
           <ChatPlace ref='chat_place' sendIt={this.sendIt} textAreaSubmit={this.handleSubmitWithTextArea}></ChatPlace>
